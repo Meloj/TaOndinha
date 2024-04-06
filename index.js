@@ -1,14 +1,29 @@
 const puppeteer = require('puppeteer');
+const readlineSync = require('readline-sync');
+const fs = require('fs');
 
 console.log('Web Scrapper de Ondas');
 
 async function app() {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
-    const praia = 'camboinhas';
-    const myurl = `https://pt.windfinder.com/forecast/${praia}`;
+    selectedBeach = 'camboinhas';
+    const myurl = `https://pt.windfinder.com/forecast/${selectedBeach}`;
     await page.goto(myurl);
-    await page.screenshot({path: 'example.png'});
+
+    // Pega o 1º valor da Classe de altura de ondas e retorna para a variável waveH
+    const waveH = await page.evaluate(() => {
+        return document.getElementsByClassName('units-wh')[0].childNodes[0].nodeValue;
+    });
+
+    console.log(`A altura prevista pras ondas hoje é de ${waveH} m.`);
+
+    //Escreve os dados em um arquivo local (JSON)
+    fs.writeFile('waves.json', JSON.stringify(waveH, null, 2), err => {
+        if(err) throw new Error('Something went wrong')
+
+        console.log('Done')
+    });
 
     await browser.close();
 }

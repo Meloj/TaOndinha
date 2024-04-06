@@ -69,7 +69,19 @@ form .input-group label{
     margin-bottom: 5px;
 }
 
-.options{
+.options-city{
+    width: 100%;
+    height: 47px;
+    background-color: rgba(255, 255, 255, 0.32);
+    border-radius: 20px;
+    outline: none;
+    border: 2px solid transparent;
+    padding: 10px;
+    font-size: 15px;
+    color: #616161;
+}
+
+.options-beach{
     width: 100%;
     height: 47px;
     background-color: rgba(255, 255, 255, 0.32);
@@ -96,7 +108,7 @@ form .input-group input{
 form .input-group input:focus{
     border-color: darkcyan;
 }
-form .input-group button{
+form .input-group #enviar{
     width: 100%;
     height: 47px;
     background: darkcyan;

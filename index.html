@@ -11,30 +11,37 @@
         <div class="img-box">
             <img src="img/onda.gif">
         </div>
+        <div class="waves-info">
+            <script>
+
+            </script>
+        </div>
         <div class="form-box">
             <h2>Descubra como está a sua praia favorita!</h2>
-            <form action="#">
+            <form action="index.js" method="get">
                 <div class="input-group">
                     <label for="city">Escolha uma cidade:</label>
-                        <select class="options" name="cities">
+                        <select class="options-city" name="cities">
                             <option value="niteroi">Niterói</option>
                         </select>
                 </div>
                 <div class="input-group">
                     <label for="beach">Escolha uma Praia:</label>
-                        <select class="options" name="beaches">
-                            <option value="camboinhas">Camboinhas</option>
+                        <select class="options-beach" name="beaches">
+                            <option value="camboinhas" selected>Camboinhas</option>
                             <option value="itacoatiara">Itacoatiara</option>
                             <option value="itaipu">Itaipu</option>
                         </select>
                 </div>
                 <div class="input-group">
-                    <button>Procurar</button>
+                    <input id="enviar"></input>
                 </div>
 
             </form>
         </div>
     </div>
-    
+
+    <!--==== MAIN JS ====-->
+    <script src="index.js"></script>
 </body>
 </html>

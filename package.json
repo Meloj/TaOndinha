@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "puppeteer": "^22.6.1"
+    "puppeteer": "^22.6.1",
+    "readline-sync": "^1.4.10"
   }
 }
