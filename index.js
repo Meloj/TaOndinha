@@ -18,8 +18,9 @@ async function app() {
 
     console.log(`A altura prevista pras ondas hoje é de ${waveH} m.`);
 
-    //Escreve os dados em um arquivo local (JSON)
-    fs.writeFile('waves.json', JSON.stringify(waveH, null, 2), err => {
+    const data = `const data = [${waveH}];`;
+    //Escreve os dados em um arquivo local (JavaScript)
+    fs.writeFile('waves.js', data, err => {
         if(err) throw new Error('Something went wrong')
 
         console.log('Done')
