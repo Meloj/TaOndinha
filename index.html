@@ -1,40 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style/style.css">
-    <title>TaOndinha?</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Veja a altura das ondas na sua praia favorita.">
+  <title>TáOndinha?</title>
+  <link rel="stylesheet" href="/style/style.css">
 </head>
 <body>
-    <div class="box">
-        <div class="img-box">
-            <img src="img/onda.gif">
-        </div>
-        <div class="form-box">
-            <h2>Descubra como está a sua praia favorita!</h2>
-            <form action="#">
-                <div class="input-group">
-                    <label for="city">Escolha uma cidade:</label>
-                        <select class="options" name="cities">
-                            <option value="niteroi">Niterói</option>
-                        </select>
-                </div>
-                <div class="input-group">
-                    <label for="beach">Escolha uma Praia:</label>
-                        <select class="options" name="beaches">
-                            <option value="camboinhas">Camboinhas</option>
-                            <option value="itacoatiara">Itacoatiara</option>
-                            <option value="itaipu">Itaipu</option>
-                        </select>
-                </div>
-                <div class="input-group">
-                    <button>Procurar</button>
-                </div>
-
-            </form>
-        </div>
+  <main class="box">
+    <div class="img-box">
+      <img src="/img/onda.gif" alt="Ondas na areia ao pôr do sol">
     </div>
-    
+
+    <section class="form-box">
+      <h1>Descubra como está a sua praia favorita!</h1>
+
+      <form id="form">
+        <div class="input-group">
+          <label for="city">Escolha uma cidade:</label>
+          <select id="city" disabled><option>Carregando...</option></select>
+        </div>
+        <div class="input-group">
+          <label for="beach">Escolha uma praia:</label>
+          <select id="beach" disabled><option>Carregando...</option></select>
+        </div>
+        <button type="submit" id="submit" disabled>Procurar</button>
+      </form>
+
+      <div id="result" aria-live="polite" hidden></div>
+      <noscript>Ative o JavaScript para ver a previsão.</noscript>
+    </section>
+  </main>
+  <script src="/app.js"></script>
 </body>
 </html>
