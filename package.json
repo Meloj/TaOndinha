@@ -1,0 +1,7 @@
+{
+  "name": "taondinha",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Previsão de altura das ondas nas praias de Niterói",
+  "engines": { "node": ">=18" }
+}
