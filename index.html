@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Veja a altura das ondas na sua praia favorita.">
   <title>TáOndinha?</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/style/style.css">
 </head>
 <body>
@@ -20,10 +21,10 @@
           <figcaption id="wave-caption" hidden></figcaption>
         </figure>
       </div>
- 
+
       <section class="form-box">
         <h1>Descubra como está a sua praia favorita!</h1>
- 
+
         <form id="form">
           <div class="input-group">
             <label for="city">Escolha uma cidade:</label>
@@ -33,18 +34,17 @@
             <label for="beach">Escolha uma praia:</label>
             <select id="beach" disabled><option>Carregando...</option></select>
           </div>
-          <button type="submit" id="submit" disabled>Procurar</button>
         </form>
- 
+
         <div id="result" aria-live="polite" hidden></div>
         <noscript>Ative o JavaScript para ver a previsão.</noscript>
       </section>
     </div>
- 
+
     <details class="medicao">
       <summary>Como a altura da onda é medida?</summary>
       <figure>
-        <img src="/img/ilhasdeatibaia.jpg" alt="Infográfico: onda de 2,5 m medida da base à crista e 1,4 m medida dentro do tubo" loading="lazy">
+        <img src="/img/ilhas-de-atibaia.jpg" alt="Infográfico: onda de 2,5 m medida da base à crista e 1,4 m medida dentro do tubo" loading="lazy">
         <figcaption>Infográfico: <strong>Ilhas de Atibaia</strong>.</figcaption>
       </figure>
       <p>
@@ -53,6 +53,10 @@
         medida feita por surfistas no local.
       </p>
     </details>
+    <footer class="creditos">
+      Dados de ondas: <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo.com</a>
+      · Infográfico: Ilhas de Atibaia
+    </footer>
   </main>
   <script src="/app.js"></script>
 </body>
