@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
- 
+
 :root {
   --bg: #0ea1db;
   --accent: darkcyan;
@@ -8,7 +8,7 @@
   --field: rgba(255, 255, 255, 0.5);
 }
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
- 
+
 body {
   min-height: 100vh;
   padding: 20px;
@@ -18,9 +18,9 @@ body {
   background: var(--bg);
   color: var(--text);
 }
- 
+
 .box { display: flex; width: 100%; max-width: 930px; }
- 
+
 .img-box {
   width: 50%;
   padding: 20px;
@@ -30,7 +30,7 @@ body {
   border-radius: 20px 0 0 20px;
 }
 .img-box img { width: 100%; border-radius: 20px; }
- 
+
 .form-box {
   width: 50%;
   padding: 30px 40px;
@@ -39,11 +39,11 @@ body {
   border-radius: 0 20px 20px 0;
 }
 h1 { font-size: 28px; line-height: 1.3; color: #000; }
- 
+
 form { margin: 20px 0; }
 .input-group { margin-bottom: 15px; }
 label { display: block; margin-bottom: 5px; font-weight: 600; }
- 
+
 select, button {
   width: 100%;
   height: 47px;
@@ -54,7 +54,7 @@ select, button {
 }
 select { padding: 0 12px; background: var(--field); color: #616161; transition: border-color .3s; }
 select:focus { border-color: var(--accent); }
- 
+
 button {
   margin-top: 5px;
   background: var(--accent);
@@ -65,7 +65,7 @@ button {
 }
 button:hover:not(:disabled) { filter: brightness(1.1); }
 button:disabled { opacity: .6; cursor: wait; }
- 
+
 #result { padding: 20px; border-radius: 20px; background: var(--glass); text-align: center; }
 #result[hidden] { display: none; }
 #result.error { color: #b00020; }
@@ -73,15 +73,15 @@ button:disabled { opacity: .6; cursor: wait; }
 .place { font-weight: 500; }
 .height { font-size: 44px; font-weight: 600; line-height: 1.2; color: var(--accent); }
 .label { font-size: 12px; margin-top: 4px; }
- 
+
 .hours { display: flex; align-items: flex-end; gap: 4px; height: 90px; margin-top: 8px; }
 .hour { flex: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; }
 .bar { width: 100%; background: var(--accent); border-radius: 6px 6px 0 0; }
 .hour small { font-size: 10px; margin-top: 3px; }
- 
+
 .page { width: 100%; max-width: 930px; display: flex; flex-direction: column; gap: 20px; }
 .box { max-width: none; }
- 
+
 .img-box { flex-direction: column; justify-content: center; gap: 12px; }
 .aviso {
   padding: 10px 14px;
@@ -93,16 +93,22 @@ button:disabled { opacity: .6; cursor: wait; }
 .img-box figure { width: 100%; }
 #wave-img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; transition: opacity .25s; }
 figcaption { margin-top: 6px; font-size: 12px; text-align: center; }
- 
+
 .medicao { padding: 16px 20px; border-radius: 20px; background: var(--glass); backdrop-filter: blur(40px); font-size: 14px; }
 .medicao summary { cursor: pointer; font-weight: 600; }
 .medicao figure { margin: 14px auto 0; max-width: 420px; }
 .medicao img { width: 100%; border-radius: 14px; }
 .medicao p { margin-top: 10px; }
- 
+
 @media (max-width: 930px) {
   .box { flex-direction: column; }
   .img-box { width: 100%; border-radius: 20px 20px 0 0; }
   #wave-img { aspect-ratio: 16 / 9; }
   .form-box { width: 100%; border-radius: 0 0 20px 20px; }
 }
+
+.note { margin-top: 8px; font-size: 12px; color: #7a4b00; }
+.tomorrow { margin-top: 12px; font-size: 13px; }
+.share { width: auto; height: 36px; margin-top: 12px; padding: 0 18px; font-size: 13px; }
+.creditos { font-size: 12px; text-align: center; color: #002b3a; }
+.creditos a { color: inherit; }
