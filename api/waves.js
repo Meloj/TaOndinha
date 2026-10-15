@@ -1,4 +1,4 @@
-const CITIES = require('./_beaches');
+const CITIES = require('../lib/spots');
 
 // Índice id -> praia. Map não tem protótipo, então ids como "constructor" não passam.
 const SPOTS = new Map();
